@@ -44,6 +44,7 @@ namespace AkademiPlusMicroServiceProje.Discount
             services.AddHttpContextAccessor();
             services.AddScoped<ISharedIdentityService, SharedIdentityService>();
             services.AddScoped<IDiscountService,DiscountService>();
+
             services.AddControllers(opt =>
             {
                 opt.Filters.Add(new AuthorizeFilter(requiredAuthorizePolicy));

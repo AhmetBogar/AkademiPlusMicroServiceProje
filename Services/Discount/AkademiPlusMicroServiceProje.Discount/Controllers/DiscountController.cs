@@ -24,6 +24,7 @@ namespace AkademiPlusMicroServiceProje.Discount.Controllers
         {
             return CreateActionResultInstance(await _discountService.GetAll());
         }
+        [HttpPost]
         public async Task<IActionResult> Save(Models.Discount discount)
         {
             return CreateActionResultInstance(await _discountService.Save(discount));

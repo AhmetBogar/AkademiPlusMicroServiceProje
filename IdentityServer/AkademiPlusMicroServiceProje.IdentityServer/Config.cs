@@ -51,7 +51,7 @@ namespace AkademiPlusMicroServiceProje.IdentityServer
                   ClientId="AkademiPlusClient",
                   ClientSecrets={new Secret("secret".Sha256())},
                   AllowedGrantTypes=GrantTypes.ClientCredentials,
-                  AllowedScopes={"catalog_fullpermission","photostock_fullpermission",IdentityServerConstants.LocalApi.ScopeName}
+                  AllowedScopes={"catalog_fullpermission","photostock_fullpermission","gateway_fullpermission",IdentityServerConstants.LocalApi.ScopeName}
 
               },
               new Client
@@ -61,7 +61,7 @@ namespace AkademiPlusMicroServiceProje.IdentityServer
                   AllowOfflineAccess=true,
                   ClientSecrets={new Secret("secret".Sha256())},
                   AllowedGrantTypes=GrantTypes.ResourceOwnerPassword,
-                  AllowedScopes={"catalog_fullpermission","photostock_fullpermission","basket_fullpermission","discount_fullpermission",
+                  AllowedScopes={"catalog_fullpermission","photostock_fullpermission","basket_fullpermission","discount_fullpermission","gateway_fullpermission",
                       IdentityServerConstants.StandardScopes.Email, 
                       IdentityServerConstants.StandardScopes.OpenId, 
                       IdentityServerConstants.StandardScopes.Profile, 
